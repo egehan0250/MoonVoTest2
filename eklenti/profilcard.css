@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4b79a1, #283e51);
+}
+.card {
+  width: 750px;
+  height: 500px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 20px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+  position: absolute;
+  top: 180px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 15px;
+}
+.darkmode--activated p, .darkmode--activated li, .card, .bloc {
+  color: #283e51;
+}
+.card .img_box {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 5px solid #c05299;
+}
+.card .img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card .information {
+  margin-top: 50px;
+}
+.card .information h1 {
+  font-size: 30px;
+  color: rgba(42, 42, 42, 0.9);
+}
+.card .information h2 {
+  font-size: 23px;
+  color: rgba(42, 42, 42, 0.7);
+}
+.card .information h2 span {
+  color: rgba(192, 82, 153, 0.6);
+  font-size: 27px;
+}
+.card .information h3 i {
+  color: rgba(42, 42, 42, 1);
+  margin-right: 8px;
+}
+.card .information h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgba(42, 42, 42, 0.6);
+}
+.card .number {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.card .number .bloc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 60px;
+}
+.card .number .bloc h5 {
+  font-size: 28px;
+  color: rgba(42, 42, 42, 0.8);
+}
+.card .social {
+  display: flex;
+  justify-content: center;
+}
+.card .social a.follow {
+  margin: 0 40px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.card .social a.follow:hover {
+  transform: scale(0.8); /* Augmenter pour agrandir a la place de rétrecir*/
+}
+.card .social .follow i {
+  font-size: 25px;
+  color: #ffffff;
+}
+.follow.gradient0 {
+  background: linear-gradient(to right, #141e30, #243b55);
+}
+.follow.gradient1 {
+  background: linear-gradient(to right, #34e89e, #0f3443);
+}
+.gradient2 {
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+}
+.gradient3 {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+.gradient4 {
+  background: linear-gradient(to right, #f46b45, #eea849);
+}

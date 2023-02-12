@@ -1,0 +1,212 @@
+<html lang="tr">
+    <head>
+      <link rel = "icon" href = 
+"https://i.hizliresim.com/jlddu54.png" 
+       
+        type = "image/x-icon">
+        <title>MoonVo
+        </title>
+  
+  <title>MoonVo</title>
+      <meta property="og:type" content="website" />
+<meta property="og:title" content="MoonVo" />
+<meta property="og:site_name" content="MoonVo" />
+<meta property="og:image" content="https://i.hizliresim.com/jlddu54.png" />
+<meta name="description" content="MoonVo Modern bir oy verme botudur https://discord.gg/9TyEZnqfVV" />
+<meta property="og:description" content="MoonVo Modern bir oy verme botudur https://discord.gg/9TyEZnqfVV" />
+<meta content="#FFA500" data-react-helmet="true" name="theme-color" />
+              <link rel="stylesheet" href="./eklenti/sidebar.css">
+               <link rel="stylesheet" href="./eklenti/sifreuretici.css">     
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+  <body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+      <!-- SİDEBAR -->
+    <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!--========== CSS ==========-->
+
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+    <% if(!user) {%>   
+                <img src="https://i.hizliresim.com/9gd10tf.png" alt="" class="header__img">
+    <% } else {%>    
+      
+                      <img src="<%=  member.user.avatarURL() %>" alt="" class="header__img">
+      <% } %> 
+
+                <a href="/anasayfa" class="header__logo">MoonVo</a>
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+  <!-- SİDEBAR -->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <img src="https://i.hizliresim.com/7q87xl4.png" width="50" height="25" alt="moonvo logo">
+                        <span class="nav__logo-name">MoonVo</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">MoonVo</h3>
+    
+                            <a href="/anasayfa" class="nav__link active">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Anasayfa</span>
+                            </a>
+                            
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Araçlar</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#sayfa-açık" class="nav__dropdown-item">Şifre üretici</a>
+                                        <a href="/status" class="nav__dropdown-item">Server Status</a>
+                                        <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-message-rounded nav__icon' ></i>
+                                <span class="nav__name">Messages</span>
+                            </a>
+                        </div> 
+                      <div class="nav__items">
+                            <h3 class="nav__subtitle">Sistemler</h3>
+                        
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Explore</span>
+                            </a>
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-bookmark nav__icon' ></i>
+                                <span class="nav__name">Saved</span>
+                            </a>
+<% if(!user) {%>          
+  <a style="color:#03c03C;" href="/login" class="nav__link">
+  <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="4 0 16 16">
+  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+</svg></i>
+                                <span 
+ class="nav__name">Giriş yap</span></a>
+    <% } else {%>    
+                            <div class="nav__dropdown">
+                                <a class="nav__link">
+                                    <i class='bx bx-user nav__icon' ></i>
+                                    <span class="nav__name">Profil</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a class="btn"><%= user.username %></a>
+                                        <a href="/profil" class="nav__dropdown-item">Profilim</a>
+                                        <a  style="color:#f00;" href="?logout_eminmisin=true" class="nav__dropdown-item"><i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 12">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+  </svg> </i> Çıkış yap</a>   <% } %> 
+  </div>                                  
+  </div>
+    
+                        </div>
+    <a href="//www.dmca.com/Protection/Status.aspx?ID=19fa77e3-e6db-43d4-b548-68c812af306c" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-11.png?ID=19fa77e3-e6db-43d4-b548-68c812af306c"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+                    </div>
+      
+      
+                            </div>
+            </nav>
+        </div>
+  <!-- SİDEBAR -->
+
+<!-- ŞİFREÜRETİCİ -->   
+  <div class="container">
+	<div class="result">
+		<div class="result__title field-title">Şifre Oluşturucu</div>
+		<div class="result__info right">kopyalamak için tıklayın</div>
+		<div class="result__info left">kopyalandı</div>
+		<div class="result__viewbox" id="result">BİR ŞİFRE OLUŞTUR</div>
+		<button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>
+	</div>
+	<div class="length range__slider" data-min="4" data-max="32">
+		<div class="length__title field-title" data-length='0'>uzunluk:</div>
+		<input id="slider" type="range" min="4" max="32" value="16" />
+	</div>
+
+	<div class="settings">
+		<span class="settings__title field-title">Ayarlar</span>
+		<div class="setting">
+			<input type="checkbox" id="uppercase" checked />
+			<label for="uppercase">Büyük Harf Dahil Et</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="lowercase" checked />
+			<label for="lowercase">Küçük Harf Dahil Et</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="number" checked />
+			<label for="number">Sayıları Dahil Et</label>
+		</div>
+		<div class="setting">
+			<input type="checkbox" id="symbol" />
+			<label for="symbol">Sembolleri Dahil Et</label>
+		</div>
+	</div>
+
+	<button class="btn generate" id="generate">OLUŞTURMAK İÇİN TIKLA</button>
+</div>
+<!-- ŞİFREÜRETİCİ -->   
+
+
+
+  </body>
+    
+           <script>
+let urlParams = new URLSearchParams(window.location.search);
+if(urlParams.get('logout_eminmisin') == 'true'){
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+  swalWithBootstrapButtons.fire({
+  title: 'Emin misin?',
+  icon: 'warning',
+  html: 'Hesabından çkış yapılacak ve bazı özelliklere erişimin kesilecek!',
+  confirmButtonText: `<a href="/logout"> Evet, Eminim</a>`,
+  cancelButtonText: "İptal",
+  showCancelButton: true,
+  showCloseButton: true,
+    reverseButtons: true  
+}).then((result) => {
+  if (result.dismiss === Swal.DismissReason.cancel) {
+swalWithBootstrapButtons.fire(
+      'İptal edildi!',
+      'Hesabından çıkış yapılmadı',
+      'error'
+    )
+  } 
+})
+        }
+</script>
+        </body>
+<script src="./eklenti/sifreuretici.js">
+</script>  
+    <script src="./eklenti/sidebar.js">
+</script>     

@@ -1,0 +1,133 @@
+<html lang="tr">
+<head>
+      <link rel = "icon" href = 
+"https://i.hizliresim.com/jlddu54.png" 
+       
+        type = "image/x-icon">
+        <title>MoonVo
+        </title>
+  
+  <title>MoonVo</title>
+      <meta property="og:type" content="website" />
+<meta property="og:title" content="MoonVo" />
+<meta property="og:site_name" content="MoonVo" />
+<meta property="og:image" content="https://i.hizliresim.com/jlddu54.png" />
+<meta name="description" content="MoonVo Modern bir oy verme botudur https://discord.gg/9TyEZnqfVV" />
+<meta property="og:description" content="MoonVo Modern bir oy verme botudur https://discord.gg/9TyEZnqfVV" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Custom fonts for this template-->
+    <link href="./startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="./startbootstrap-sb-admin-2/css/sb-admin-2.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(() => {
+			$("#form1").submit((event) => {
+				event.preventDefault();
+				$.ajax({
+					type: 'POST',
+					url: '/',
+					data: $('#form1').serialize(),
+					dataType: "json",
+					success: (response) => {
+						$('#form1')[0].reset();
+						document.getElementById("check").innerHTML = response.Success;
+						//ADD THIS CODE
+						setTimeout(() => {
+							document.getElementById("check").innerHTML = "";
+						}, 3000);
+						if (response.Success == "You are regestered,You can login now.") {
+							document.getElementById("aa").click();
+						};
+					},
+					error: () => {
+					}
+				})
+			});
+		});
+	</script>
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Hesabını Oluştur!</h1>
+                            </div>
+                            <form class="user" id="form1" method="post">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+				<input type="text" class="form-control form-control-user" name="username" placeholder="Username" required="" class="form-control"><br />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+<input type="text" class="form-control form-control-user" name="email" placeholder="E-mail" required=""
+				pattern="[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~])*@[ก-๙a-zA-Z0-9](-*\.?[ก-๙a-zA-Z0-9])*\.[ก-๙a-zA-Z](-?[ก-๙a-zA-Z0-9])+$" class="form-control"><br />
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+				<input type="password" class="form-control form-control-user" name="password" placeholder="Password" required="" class="form-control"><br />
+                                    </div>
+                                </div>
+                                                              <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+<input type="password" class="form-control form-control-user" name="passwordConf" placeholder="Confirm Password" required=""
+					class="form-control"><br />
+                                    </div>
+                                </div>
+                                        <input type="submit" value="Kayıt ol!" class="btn btn-primary btn-user btn-block"/>
+                                <hr>
+                                <a href="#yakında" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Google ile kayıt ol!
+                                </a>
+                            </form>
+                          <div class="mssg bg-danger">
+			<span id="check"></span>
+		</div>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="/">Şifrenimi Unuttun?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="/login">Hesabın mevcutmu, Gİriş yap!</a>
+                            </div>
+                          		</div>
+		<div id="LangTable"><a href="/login" id="aa"></a>
+		</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="./startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js"></script>
+    <script src="./startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="./startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="./startbootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

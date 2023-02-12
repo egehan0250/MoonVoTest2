@@ -1,0 +1,29 @@
+body {
+  font-family: "Montserrat";
+  margin: 0;
+}
+footer {
+  position: absolute;
+  
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 3px;
+  font-family: $body;
+  a {
+        border-radius: 5px;
+      font-weight: bold;
+        padding: 1rem 2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      color: #7d7d7d;
+    }
+  }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MoonVo Sunucu Oylama Sistemi!">
+    <meta name="keywords" content="Sunucu Oylama Sistemi, MoonVo, MoonVo login, Login MoonVo">
+    <meta name="author" content="moonvo">
+    <link rel="icon" href="https://i.hizliresim.com/jlddu54.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.hizliresim.com/jlddu54.png" type="image/x-icon">
+    <title>MoonVo</title>
+    <!-- Google font-->
+  <script src="https://kit.fontawesome.com/616afa13d7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/font-awesome.css">
+    <!-- ico-font-->
+      <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/icofont.css">
+  <link rel="stylesheet" href="./eklenti/icofont.min.css">
+
+    <!-- Themify icon-->
+        <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/themify.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/photoswipe.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/style.css">
+    <link id="color" rel="stylesheet" href="/Zetaadmindash/assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/responsive.css">
+   <style>
+::-webkit-scrollbar {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        background-color: transparent;
+}
+</style>
+  </head>
+  <body class="dark-only">     
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader">
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-ball"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+      <!-- Page Header Start-->
+         <%- navbar %>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">        
+            <div class="page-title">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h3>Destek Talepi</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a class="home-item" href="index.html"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item"> Destek Talepi</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12">
+<div class="card">
+<div class="card-header pb-0">
+<h5>Destek Taleplerim</h5>
+</div>
+<div class="card-body">
+
+<div class="row">
+<div class="order-history table-responsive wishlist">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Durum</th>
+<th>Konu</th>
+<th>O. Tarihi</th>
+<th>Görüntüle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <% categories.forEach(categorie => { %>
+<td>
+    <% if(categorie.status == "false") {%>   
+<span class="badge badge-danger">Kapalı</span>
+    <% } else {%>    
+<span class="badge badge-success">Açık</span>
+      <% } %> 
+</td>
+<td><%= categorie.subject %></td>
+<td><%= categorie.createDate %></td>
+<td><a href="/my_tickets/show/<%= categorie.view_id %>"><i class="fa-solid fa-eye"></i></a></td>
+    <% }); %> 
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+<div class="card">
+<div class="card-header pb-0">
+<h5>Destek Oluştur</h5>
+</div>
+<div class="card-body">
+<form action="/my_tickets/new" method="post">
+  <div class="mb-3">
+<label class="form-label">İsim</label>
+<input class="form-control" type="text" name="support_name" placeholder="İsim" required>
+</div>
+  <div class="mb-3">
+<label class="form-label">Soyisim</label>
+<input class="form-control" type="text" name="support_lastname" placeholder="Soyisim" required>
+</div>
+  <div class="mb-3">
+<label class="form-label">E-posta</label>
+<input class="form-control" type="text" name="support_email" placeholder="E-posta" required>
+</div>
+<div class="mb-3">
+<label class="form-label">Konu</label>
+<input class="form-control" type="text" name="support_title" placeholder="Konu" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Öncelik</label>
+<select class="form-select" name="support_level" required>
+<option value="" disabled selected>Bir Öncelik Seç</option>
+<option value="Düşük">Düşük</option>
+<option value="Orta">Orta</option>
+<option value="Yüksek">Yüksek</option>
+</select>
+</div>
+<div class="mb-3">
+<h6 class="form-label">Mesaj</h6>
+<textarea class="form-control" rows="5" name="support_reason" placeholder="Lütfen Mümkün Olduğunca Detaylı Bir Şekilde Açıklayınız." required></textarea>
+</div>
+<div class="form-footer">
+<button class="btn btn-primary btn-block" style="width: 100%;">Oluştur</button>
+</div>
+</form>
+</div>
+</div>
+    </div>
+
+
+<!-- bitiş-->
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">Copyright 2022 © MoonVo  </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="/Zetaadmindash/assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="/Zetaadmindash/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="/Zetaadmindash/assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="/Zetaadmindash/assets/js/scrollbar/simplebar.js"></script>
+    <script src="/Zetaadmindash/assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="/Zetaadmindash/assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="/Zetaadmindash/assets/js/sidebar-menu.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/knob/knob.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/knob/knob-chart.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="/Zetaadmindash/assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/dashboard/default.js"></script>
+    <script src="/Zetaadmindash/assets/js/notify/index.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.en.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/handlebars.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead-search/handlebars.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead-search/typeahead-custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/height-equal.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+                <script src="/sweetalert/libs/sweetalert2.all.min.js"></script>
+        
+    <script src="/Zetaadmindash/assets/js/script.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
+  </body>
+          <script>
+$(document).ready(function() {
+    $("#settingsbutton").click(function(){
+Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Sunucu Ayarları Yakında!',
+  footer: '<a href="">www.moonvo.com.tr</a>'
+})
+    }); 
+});
+    
+          </script>
+
+<script>
+           let urlParams1 = new URLSearchParams(window.location.search);
+if(urlParams1.get('settingsbakim') == 'true'){  
+Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Sunucu Ayarları Yakında!',
+  footer: '<a href="">www.moonvo.com.tr</a>'
+})
+}
+  </script>
+<!-- Mirrored from admin.pixelstrap.com/zeta/theme/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Feb 2022 04:55:25 GMT -->
+</html>

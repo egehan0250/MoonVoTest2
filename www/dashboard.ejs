@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MoonVo Sunucu Oylama Sistemi!">
+    <meta name="keywords" content="Sunucu Oylama Sistemi, MoonVo, MoonVo login, Login MoonVo">
+    <meta name="author" content="moonvo">
+    <link rel="icon" href="https://i.hizliresim.com/jlddu54.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.hizliresim.com/jlddu54.png" type="image/x-icon">
+    <title>MoonVo</title>
+    <!-- Google font-->
+  <script src="https://kit.fontawesome.com/616afa13d7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/font-awesome.css">
+    <!-- ico-font-->
+      <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/icofont.css">
+  <link rel="stylesheet" href="./eklenti/icofont.min.css">
+
+    <!-- Themify icon-->
+        <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/themify.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/photoswipe.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/style.css">
+    <link id="color" rel="stylesheet" href="/Zetaadmindash/assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="/Zetaadmindash/assets/css/responsive.css">
+   <style>
+::-webkit-scrollbar {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        background-color: transparent;
+}
+</style>
+  </head>
+  <body class="dark-only">     
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+      <div class="loader">
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
+        <div class="loader-ball"></div>
+      </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper">
+      <!-- Page Header Start-->
+     <%- navbar %>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">        
+            <div class="page-title">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h3>Ana Sayfa</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"> <a class="home-item" href="index.html"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item"> Dashboard</li>
+                    <li class="breadcrumb-item active"> Ana sayfa</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid default-dash">
+            <div class="row"> 
+                <div class="card profile-greeting">
+                  <div class="card-body">
+                    <div class="media">
+                      <div class="media-body"> 
+                        <div class="greeting-user">
+                          <h1>Selam, <%= username %>!</h1>
+                          <p>MoonVo'a Hoş Geldin, MoonVo İle Sunucularını En Üst Düzeye Taşı, Sevdiğin Sunuculara Oy Ver</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="cartoon-img"><img class="img-fluid" src="http://admin.pixelstrap.com/zeta/assets/images/images.svg" alt=""></div>
+                  </div>
+                </div>
+                          <div class="col-sm-6 col-xl-3 col-lg-6">
+                <div class="card o-hidden">
+                  <div class="card-body">
+                    <div class="media static-widget">
+                      <div class="media-body">
+                        <h6 class="font-roboto">Bakiyen</h6>
+                        <h4 class="mb-0 counter"><%= user_account.balance %></h4>
+                      </div>
+                      <svg class="fill-secondary" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5938 14.1562V17.2278C20.9604 17.8102 19.7812 19.3566 19.7812 21.1875C19.7812 23.5138 21.6737 25.4062 24 25.4062C24.7759 25.4062 25.4062 26.0366 25.4062 26.8125C25.4062 27.5884 24.7759 28.2188 24 28.2188C23.2241 28.2188 22.5938 27.5884 22.5938 26.8125H19.7812C19.7812 28.6434 20.9604 30.1898 22.5938 30.7722V33.8438H25.4062V30.7722C27.0396 30.1898 28.2188 28.6434 28.2188 26.8125C28.2188 24.4862 26.3263 22.5938 24 22.5938C23.2241 22.5938 22.5938 21.9634 22.5938 21.1875C22.5938 20.4116 23.2241 19.7812 24 19.7812C24.7759 19.7812 25.4062 20.4116 25.4062 21.1875H28.2188C28.2188 19.3566 27.0396 17.8102 25.4062 17.2278V14.1562H22.5938Z"></path>
+                        <path d="M25.4062 0V11.4859C31.2498 12.1433 35.8642 16.7579 36.5232 22.5938H48C47.2954 10.5189 37.4829 0.704531 25.4062 0Z"></path>
+                        <path d="M14.1556 31.8558C12.4237 29.6903 11.3438 26.9823 11.3438 24C11.3438 17.5025 16.283 12.1958 22.5938 11.4859V0C10.0492 0.731813 0 11.2718 0 24C0 30.0952 2.39381 35.6398 6.14897 39.8624L14.1556 31.8558Z"></path>
+                        <path d="M47.9977 25.4062H36.5143C35.8044 31.717 30.4977 36.6562 24.0002 36.6562C21.0179 36.6562 18.3099 35.5763 16.1444 33.8444L8.13779 41.851C12.3604 45.6062 17.905 48 24.0002 48C36.7284 48 47.2659 37.9508 47.9977 25.4062Z"></path>
+                      </svg>
+                    </div>
+                    <div class="progress-widget">
+                      <div class="progress sm-progress-bar progress-animate">
+                        <div class="progress-gradient-secondary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="animate-circle"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                            <div class="col-sm-6 col-xl-3 col-lg-6">
+                <div class="card o-hidden">
+                  <div class="card-body">
+                    <div class="media static-widget">
+                      <div class="media-body">
+                        <h6 class="font-roboto">Toplam Giriş</h6>
+                        <h4 class="mb-0 counter"><%= user_account.total_user_login %></h4>
+                      </div>
+                      <svg class="fill-danger" width="41" height="46" viewBox="0 0 41 46" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5245 23.3155C24.0019 23.3152 26.3325 16.8296 26.9426 11.5022C27.6941 4.93936 24.5906 0 17.5245 0C10.4593 0 7.35423 4.93899 8.10639 11.5022C8.71709 16.8296 11.047 23.316 17.5245 23.3155Z"></path>
+                        <path d="M31.6878 26.0152C31.8962 26.0152 32.1033 26.0214 32.309 26.0328C32.0007 25.5931 31.6439 25.2053 31.2264 24.8935C29.9817 23.9646 28.3698 23.6598 26.9448 23.0998C26.2511 22.8273 25.6299 22.5567 25.0468 22.2485C23.0787 24.4068 20.5123 25.5359 17.5236 25.5362C14.536 25.5362 11.9697 24.4071 10.0019 22.2485C9.41877 22.5568 8.79747 22.8273 8.10393 23.0998C6.67891 23.6599 5.06703 23.9646 3.82233 24.8935C1.6698 26.5001 1.11351 30.1144 0.676438 32.5797C0.315729 34.6148 0.0734026 36.6917 0.00267388 38.7588C-0.0521202 40.36 0.738448 40.5846 2.07801 41.0679C3.75528 41.6728 5.48712 42.1219 7.23061 42.4901C10.5977 43.2011 14.0684 43.7475 17.5242 43.7719C19.1987 43.76 20.8766 43.6249 22.5446 43.4087C21.3095 41.6193 20.5852 39.4517 20.5852 37.1179C20.5853 30.9957 25.5658 26.0152 31.6878 26.0152Z"></path>
+                        <path d="M31.6878 28.2357C26.7825 28.2357 22.8057 32.2126 22.8057 37.1179C22.8057 42.0232 26.7824 46 31.6878 46C36.5932 46 40.57 42.0232 40.57 37.1179C40.57 32.2125 36.5931 28.2357 31.6878 28.2357ZM35.5738 38.6417H33.2118V41.0037C33.2118 41.8453 32.5295 42.5277 31.6879 42.5277C30.8462 42.5277 30.1639 41.8453 30.1639 41.0037V38.6417H27.802C26.9603 38.6417 26.278 37.9595 26.278 37.1177C26.278 36.276 26.9602 35.5937 27.802 35.5937H30.1639V33.2318C30.1639 32.3901 30.8462 31.7078 31.6879 31.7078C32.5296 31.7078 33.2118 32.3901 33.2118 33.2318V35.5937H35.5738C36.4155 35.5937 37.0978 36.276 37.0978 37.1177C37.0977 37.9595 36.4155 38.6417 35.5738 38.6417Z"></path>
+                      </svg>
+                    </div>
+                    <div class="progress-widget">
+                      <div class="progress sm-progress-bar progress-animate">
+                        <div class="progress-gradient-danger" role="progressbar" style="width: 48%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="animate-circle"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-xl-6">
+                <div class="card height-equal">
+                  <div class="card-header pb-0">
+                    <h5>Güncellemeler</h5>
+                  </div>
+                  <div class="card-body">
+                    <p>Dashboard V5 Sürümüne Yükseltildi.</p>
+                  </div>
+                  <div class="card-footer">
+                    <h6 class="mb-0">15/11/2022</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 dash-xl-50">
+                <div class="card bg-primary premium-access">
+                  <div class="card-body">                  
+                    <h6 class="f-22">Pro Plan!</h6>
+                    <p>10'un Üzerinde Yeni Özellik, Hemen 3 Günlük Deneme Süresini Etkinleştir Kart gerekmez*</p><div id="premiumbutton"><a class="btn btn-outline-white_color" > Ücretsiz Dene</a></div>
+                  </div>
+                  <!-- Root element of PhotoSwipe. Must have class pswp.-->
+                  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="pswp__bg"></div>
+                    <div class="pswp__scroll-wrap">
+                      <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                      </div>
+                      <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                          <div class="pswp__counter"></div>
+                          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                          <button class="pswp__button pswp__button--share" title="Share"></button>
+                          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                          <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                          <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                        <div class="pswp__caption">
+                          <div class="pswp__caption__center"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">Copyright 2022 © MoonVo  </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="/Zetaadmindash/assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="/Zetaadmindash/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="/Zetaadmindash/assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="/Zetaadmindash/assets/js/scrollbar/simplebar.js"></script>
+    <script src="/Zetaadmindash/assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="/Zetaadmindash/assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="/Zetaadmindash/assets/js/sidebar-menu.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/knob/knob.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/knob/knob-chart.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="/Zetaadmindash/assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="/Zetaadmindash/assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/dashboard/default.js"></script>
+    <script src="/Zetaadmindash/assets/js/notify/index.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.en.js"></script>
+    <script src="/Zetaadmindash/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="/Zetaadmindash/assets/js/photoswipe/photoswipe.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/handlebars.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead-search/handlebars.js"></script>
+    <script src="/Zetaadmindash/assets/js/typeahead-search/typeahead-custom.js"></script>
+    <script src="/Zetaadmindash/assets/js/height-equal.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+                <script src="/sweetalert/libs/sweetalert2.all.min.js"></script>
+        
+    <script src="/Zetaadmindash/assets/js/script.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
+  </body>
+          <script>
+$(document).ready(function() {
+    $("#premiumbutton").click(function(){
+Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Ücretsiz Pro Plan Yakında!',
+  footer: '<a href="">www.moonvo.com.tr</a>'
+})
+    }); 
+});
+    
+          </script>
+<!-- Mirrored from admin.pixelstrap.com/zeta/theme/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Feb 2022 04:55:25 GMT -->
+</html>
